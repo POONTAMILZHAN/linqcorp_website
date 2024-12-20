@@ -1,0 +1,5 @@
+/* In your global CSS file (e.g., styles.css or App.css) */
+html {
+    scroll-behavior: smooth;
+  }
+  

@@ -1,0 +1,187 @@
+/* General Hero Section Styling */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  background-color: #333;
+  overflow: hidden; /* Ensure no images go outside the section */
+}
+
+/* Hero Content Section */
+.hero-content {
+  z-index: 10;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 20px;
+  max-width: 100%;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards 1s; /* Delay for text */
+}
+
+/* Hero Text Styling */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.hero .cta-button {
+  padding: 12px 25px;
+  margin: 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2ba2f1;
+  color: black;
+}
+
+/* Keyframe Animation for Text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero Layers */
+.hero-layers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Ensure layers don't interfere with hero content */
+  overflow: hidden;
+}
+
+/* Image Layer Styling */
+.hero-layer {
+  position: absolute;
+  width: 250px; /* Image size for larger screens */
+  height: 250px; /* Image size for larger screens */
+  object-fit: cover;
+  transition: transform 0.2s ease-out; /* Smooth transition when moving */
+  border-radius: 8px;
+  z-index: 5;
+}
+
+/* Hover Effect for Images (Desktop) */
+.hero-layer img {
+  transition: transform 0.2s ease-out; /* Smooth transition */
+}
+
+/* Hover Movement Based on Mouse Position (Desktop) */
+.hero-layer:hover img {
+  transform: scale(1.2) rotate(10deg); /* Zoom and rotate */
+  cursor: pointer;
+}
+
+/* Fade-in for the Hero Section */
+.hero-content {
+  opacity: 1;
+  animation: fadeInText 2s ease-in-out forwards 1s;
+}
+
+/* Hero Content Section on Mobile */
+@media (max-width: 768px) {
+  /* Adjust Hero section height for mobile */
+  .hero {
+    height: 80vh; /* Adjust height to make sure content fits better on smaller screens */
+    padding: 10px;
+  }
+
+  /* Adjust the font sizes for mobile */
+  .hero h1 {
+    font-size: 2.2rem; /* Smaller heading */
+    margin-bottom: 15px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem; /* Smaller font for mobile */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  /* Make images smaller for mobile */
+  .hero-layer {
+    width: 180px; /* Smaller image size for mobile */
+    height: 180px; /* Smaller image size for mobile */
+  }
+
+  /* Adjust Hero Content Text */
+  .hero-content {
+    padding: 20px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller heading */
+    margin-bottom: 10px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+    background-color: #3498db;
+  }
+
+  /* Mobile Hover-like Effect */
+  .hero-layer.active img {
+    transform: scale(1.2) rotate(10deg); /* Zoom and rotate on tap */
+  }
+}
+
+/* Hero Content Section on Tablets */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Slightly smaller text for tablets */
+  }
+
+  .hero-layer {
+    width: 220px; /* Adjust image size for tablets */
+    height: 220px; /* Adjust image size for tablets */
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+/* Hero Content Section for Larger Screens */
+@media (min-width: 1200px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 3rem; /* Larger heading */
+  }
+
+  .hero-layer {
+    width: 250px; /* Normal image size for large screens */
+    height: 250px; /* Normal image size for large screens */
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 14px 30px;
+  }
+}

@@ -1,0 +1,161 @@
+/* Contact Us Section Styling */
+.contact-us {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+  color: #333;
+  text-align: center;
+}
+
+/* Container for the contact form */
+.contact-container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* Image Section */
+.contact-image {
+  position: relative;
+}
+
+/* Form and Image Section (Flex Layout) */
+.form-and-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contact Form Styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Make inputs full width */
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Map Section */
+.map-container {
+  margin-top: 50px;
+}
+
+.map-container h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  width: 100%; /* Make the map container responsive */
+  height: 400px; /* Set a fixed height */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Contact Us Title */
+  .contact-container h2 {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .contact-container p {
+    font-size: 1rem; /* Adjust text size for mobile */
+  }
+
+  /* Form Layout */
+  .form-and-image {
+    flex-direction: column; /* Stack the form and image vertically on mobile */
+    align-items: center;
+  }
+
+  /* Form Inputs and Textarea */
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%; /* Make the form inputs smaller to fit on mobile */
+    font-size: 1rem;
+    margin-left: 0; /* Remove the left margin */
+  }
+
+  .contact-form textarea {
+    height: 120px; /* Adjust textarea size on mobile */
+  }
+
+  /* Form Button */
+  .contact-form button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    width: 90%; /* Make button full width */
+    margin-top: 20px; /* Add space between button and other form fields */
+  }
+
+  /* Map Section */
+  .map-container h2 {
+    font-size: 2rem; /* Adjust map section heading */
+  }
+
+  .map-container iframe {
+    height: 250px; /* Reduce map height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens (e.g., mobile phones in portrait mode) */
+  .contact-container h2 {
+    font-size: 1.8rem; /* Smaller heading for phones */
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 10px 20px; /* Smaller button padding */
+  }
+
+  /* Form Inputs and Textarea */
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    height: 100px; /* Smaller textarea */
+  }
+
+  /* Map Section */
+  .map-container iframe {
+    height: 200px; /* Further reduce map size on very small screens */
+  }
+}

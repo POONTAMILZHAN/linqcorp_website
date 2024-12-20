@@ -1,0 +1,75 @@
+/* Magic Mouse Particle */
+.magic-particle {
+  position: absolute;
+  border-radius: 50%; /* Ensures the particles are circles */
+  opacity: 0;
+  pointer-events: none;
+  animation: particle-animation 1s ease-out forwards;
+}
+
+/* Keyframe animation for particles */
+@keyframes particle-animation {
+  0% {
+      transform: scale(0); /* Start small */
+      opacity: 1; /* Fully visible at the start */
+  }
+  50% {
+      transform: scale(2); /* Grow the particle */
+      opacity: 0.6; /* Partially fade */
+  }
+  100% {
+      transform: scale(3); /* Make the particle larger */
+      opacity: 0; /* Fade out completely */
+  }
+}
+
+/* Mobile Responsiveness for Magic Mouse Particle */
+@media (max-width: 768px) {
+  .magic-particle {
+      animation: particle-animation 1s ease-out forwards; /* Keep the same animation but tweak the scaling */
+  }
+
+  /* Smaller particles for mobile */
+  .magic-particle {
+      width: 15px; /* Smaller size */
+      height: 15px; /* Smaller size */
+  }
+
+  @keyframes particle-animation {
+      0% {
+          transform: scale(0); /* Start small */
+          opacity: 1;
+      }
+      50% {
+          transform: scale(1.5); /* Slightly smaller particle grow */
+          opacity: 0.6;
+      }
+      100% {
+          transform: scale(2); /* Smaller max size */
+          opacity: 0;
+      }
+  }
+}
+
+/* Extra Small Screen (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .magic-particle {
+      width: 10px; /* Even smaller particles */
+      height: 10px; /* Even smaller particles */
+  }
+
+  @keyframes particle-animation {
+      0% {
+          transform: scale(0); /* Start small */
+          opacity: 1;
+      }
+      50% {
+          transform: scale(1.2); /* Slightly smaller particle grow */
+          opacity: 0.5;
+      }
+      100% {
+          transform: scale(1.5); /* Even smaller max size */
+          opacity: 0;
+      }
+  }
+}

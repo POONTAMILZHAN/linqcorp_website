@@ -1,0 +1,299 @@
+/* General Styles */
+.digital-marketing-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.5s ease-in-out;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Hero Section */
+.digital-marketing-hero {
+  background: url('https://static.vecteezy.com/system/resources/previews/022/694/393/non_2x/social-media-icons-free-png.png') no-repeat center center;
+  background-size: fit; /* Cover to ensure the background scales well on mobile */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+  padding: 40px;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 70%;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.hero-overlay.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Text Fade-in Animation */
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Parallax Motion Effect on Image */
+.motion-image-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.motion-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+}
+
+.motion-image.active {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.motion-image-container img:hover {
+  transform: scale(1.05) rotate(3deg); /* Slight scale and rotate effect */
+  opacity: 0.9;
+}
+
+/* What is Digital Marketing Section */
+.what-is-digital-marketing {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+  text-align: center;
+  
+}
+
+.what-is-digital-marketing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.what-is-digital-marketing p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Digital Marketing Services Section */
+.services {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  width: 22%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+.service-card p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* CTA Section */
+.cta {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #62f5b1, #015f30);
+  text-align: center;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cta-btn {
+  background-color: #fff;
+  color: #3498db;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Hero Section */
+  .digital-marketing-hero {
+      background-size: cover; /* Ensure background image scales well */
+      height: 70vh; /* Reduce height on smaller screens */
+      padding: 20px;
+  }
+
+  .hero-overlay {
+      max-width: 90%;
+      padding: 20px;
+  }
+
+  .hero-title {
+      font-size: 2.5rem; /* Adjust font size */
+  }
+
+  .hero-description {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  /* What is Digital Marketing Section */
+  .what-is-digital-marketing {
+      padding: 60px 20px; /* Reduce padding on smaller screens */
+  }
+
+  .what-is-digital-marketing h2 {
+      font-size: 2rem; /* Adjust heading size */
+  }
+
+  .what-is-digital-marketing p {
+      font-size: 1rem; /* Adjust paragraph text */
+  }
+
+  /* Services Section */
+  .services h2 {
+      font-size: 2rem;
+  }
+
+  .service-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service-card {
+      width: 90%; /* Make service cards take up more space on mobile */
+      margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+      font-size: 1.6rem; /* Adjust heading size */
+  }
+
+  .service-card p {
+      font-size: 1rem; /* Adjust paragraph text */
+  }
+
+  /* CTA Section */
+  .cta {
+      padding: 60px 20px; /* Reduce padding */
+  }
+
+  .cta h2 {
+      font-size: 2rem;
+  }
+
+  .cta-btn {
+      font-size: 1rem;
+      padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust for small mobile screens */
+  .hero-title {
+      font-size: 2rem; /* Smaller title font size */
+  }
+
+  .hero-description {
+      font-size: 0.9rem; /* Smaller description font */
+  }
+
+  .service-card {
+      width: 100%; /* Full width service cards */
+      margin-bottom: 20px;
+  }
+
+  .cta h2 {
+      font-size: 1.8rem;
+  }
+
+  .cta-btn {
+      font-size: 1rem;
+      padding: 12px 25px;
+  }
+}

@@ -1,0 +1,318 @@
+/* General Styles */
+.website-creation-container {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  }
+  
+  /* Hero Section */
+  .website-creation-hero {
+    background: url('https://www.transparentpng.com/download/web-design/web-design-high-quality-png-6.png') no-repeat center center;
+    background-size: fit; /* Ensures the image covers the entire area */
+    background-attachment: relative; /* Parallax effect on scroll */
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out; /* Hero section fade-in animation */
+  }
+  
+  /* Hero Overlay */
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    padding: 40px;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 70%;
+    animation: slideUp 1s ease-out; /* Slide-up effect */
+    transform: translateY(50px);
+  }
+  
+  /* Hero Text */
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInText 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeInText 1.5s ease-in-out;
+  }
+  
+  /* Text Fade-in Animation */
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide-up Animation */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Introduction Section */
+  .website-introduction {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 1px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .website-introduction h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .website-introduction p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Website Showcase Section */
+  .website-showcase {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+    text-align: center;
+  }
+  
+  .website-showcase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .website-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .website-item {
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .website-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .website-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .website-item:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* About Us Section */
+  .website-about {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+    text-align: center;
+    color: #333;
+  }
+  
+  .website-about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .website-about p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Why Choose Us Section */
+  .website-why-choose-us {
+    background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .website-why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .reason-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .reason-item {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .reason-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #3498db;
+  }
+  
+  .reason-item p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .reason-item:hover {
+    transform: translateY(-20px);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* CTA (Call to Action) Section */
+  .cta-section {
+    padding: 80px 20px;
+    background-color: #3498db;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .cta-btn {
+    background-color: #fff;
+    color: #3498db;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .cta-btn:hover {
+    background-color: #085223;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations for Hero and Sections */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .website-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .website-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .reason-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .website-introduction,
+    .website-showcase,
+    .website-about,
+    .website-why-choose-us {
+      padding: 60px 20px;
+    }
+  
+    .website-creation-hero {
+      background-position: center;
+      height: 80vh;
+      background-attachment: scroll; /* Disable parallax effect on small screens */
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,125 @@
+/* Loader.css */
+
+/* Full-screen container to center the loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional background overlay */
+  z-index: 9999;
+}
+
+/* Centering the loader content */
+.loader-content {
+  text-align: center;
+  width: 80%; /* Adjust based on your design */
+  max-width: 400px; /* Max width for better responsiveness */
+}
+
+/* Rotating Emoji styling */
+.emoji-container {
+  font-size: 80px; /* Size of the emoji */
+  animation: rotateEmoji 2s infinite linear; /* Infinite rotation */
+  margin-bottom: 20px; /* Space between the emoji and text */
+  
+}
+
+/* Animation for rotating the emoji */
+@keyframes rotateEmoji {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+/* Loading text styling */
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between text and progress bar */
+  color: #333;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for text */
+}
+
+/* Fade-in effect for the text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Progress bar container */
+.progress-bar-container {
+  width: 100%;
+  height: 20px; /* Height of the progress bar */
+  background-color: #f0f0f0; /* Light background for the bar */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures progress bar is within the container */
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+/* Progress bar (the actual filling part) */
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the filled part of the progress bar */
+  width: 0; /* Initially 0% width */
+  border-radius: 10px;
+  transition: width 0.5s ease-out; /* Smooth transition for width change */
+}
+
+/* Optional: Adding a glow effect to the progress bar */
+.progress-bar {
+  animation: glowEffect 1s infinite alternate; /* Glowing effect */
+}
+
+/* Glow effect for the progress bar */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 10px #4caf50;
+  }
+  100% {
+    box-shadow: 0 0 20px #4caf50;
+  }
+}
+
+/* Content after loading completion */
+.loaded-content {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Optionally hide content initially */
+.loaded-content {
+  opacity: 0;
+}
+
+/* When loading is complete, the content fades in */
+.loader-container .loaded-content {
+  opacity: 1;
+  animation: fadeInContent 1s forwards;
+}
+
+/* Fade-in animation for the loaded content */
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

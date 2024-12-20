@@ -1,0 +1,312 @@
+/* General Styles */
+.nfc-cards-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+  
+}
+
+/* Hero Section */
+.nfc-cards-hero {
+  background: url('https://www.printplast.com/wp-content/uploads/2022/03/NFC-CARD.png') no-repeat center center;
+  background-size: 550px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    padding: 40px;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 70%;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  
+  
+}
+.hero-overlay.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+ /* Text Fade-in Animation */
+ @keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.nfc-cards-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nfc-cards-hero p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Information Section */
+.nfc-info {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+  text-align: center;
+  animation: fadeUp 1s ease-in-out forwards;
+}
+
+.nfc-info h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nfc-info p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Benefits Section */
+.nfc-benefits {
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.nfc-benefits h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.nfc-benefits h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #3498db;
+  margin: 20px auto;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+ 
+  margin:auto;
+  animation: gridFadeIn 1.5s ease-in-out;
+}
+
+.benefit-item {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  animation: fadeUp 3s ease-in-out forwards;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(1, 0, 0, 0.1);
+  /* Slight brightening effect */
+  background: linear-gradient(to right, #24aa6e, #d7ffeb);
+  color: white;
+  
+}
+
+.benefit-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #3498db;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Product Image Section */
+.nfc-product-images {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8ffd6, #d7ffeb);
+
+  text-align: center;
+}
+
+.nfc-product-images h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between images */
+  
+}
+
+.image-item {
+  width: 100%; /* Take full width on smaller screens */
+  max-width: 550px; /* Ensure a maximum width for each image */
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Ensure images are aligned and do not stretch */
+}
+
+.image-item img {
+  width: 100%;  /* Ensures the image takes up the full width of its container */
+  height: 500px; /* Maintain aspect ratio */
+  border-radius: 15px;
+ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+
+
+
+/* Call to Action Section */
+.cta-section {
+  background: linear-gradient(to right, #62f5b1, #015f30);
+  padding: 60px 20px;
+  text-align: center;
+  color: rgb(10, 10, 10);
+  position: relative;
+  animation: fadeUp 1.5s ease-in-out forwards;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #fff;
+  color: #3498db;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #085223;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gridFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3D Card Hover Effect (optional) */
+.benefit-item {
+  position: relative;
+  perspective: 1000px;
+}
+
+.benefit-item:hover .card-inner {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card-inner img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.benefit-item:hover .card-inner img {
+  transform: scale(1.1);
+}
